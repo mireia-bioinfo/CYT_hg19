@@ -7,6 +7,7 @@ longLabel ATAC-seq in EndoC-bH1 cells.
 visibility full
 viewLimits 0:20
 smoothingWindow 2
+windowingFunction mean
 alwaysZero on
 priority 1
 allButtonPair on
