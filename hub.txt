@@ -1,0 +1,5 @@
+hub CYT_hub
+shortLabel CYT-exposed beta cells
+longLabel Beta cells and human islets responses to proinflammatory cytokines
+genomesFile genomes.txt
+email mireia.bioinfo@upf.edu

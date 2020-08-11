@@ -1,0 +1,30 @@
+#####################################################
+track ATAC_endoc
+compositeTrack on
+type bigWig
+shortLabel EndoC ATAC-seq
+longLabel ATAC-seq in EndoC-bH1 cells.
+visibility full
+viewLimits 0.0:15.0
+allButtonPair on
+showSubtrackColorOnUi on
+maxHeightPixels 500:100:8
+viewLimits 1:20
+priority 1
+allButtonPair on
+
+	track ctrl
+	bigDataUrl https://ndownloader.figshare.com/files/24194684?private_link=f9d1cb63b3334ecb3bb2
+	shortLabel ATAC-seq EndoC CTRL
+	longLabel ATAC-seq in EndoC-bH1 performed in control conditions.
+	parent ATAC_endoc
+	type bigWig
+	color 255,0,0
+
+	track cyt
+	bigDataUrl https://ndownloader.figshare.com/files/24194750?private_link=f9d1cb63b3334ecb3bb2
+	shortLabel ATAC-seq EndoC CYT
+	longLabel ATAC-seq in EndoC-bH1 performed after exposure to proinflammatory cytokines.
+	parent ATAC_endoc
+	type bigWig
+	color 0,255,0
