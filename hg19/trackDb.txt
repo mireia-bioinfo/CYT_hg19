@@ -5,7 +5,6 @@ type bigWig
 shortLabel ATAC-seq EndoC
 longLabel ATAC-seq in EndoC-bH1 cells.
 visibility full
-viewLimits 0.0:15.0
 allButtonPair on
 showSubtrackColorOnUi on
 smoothingWindow 2
