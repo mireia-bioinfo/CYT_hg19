@@ -1,10 +1,10 @@
-track superTrack1
+track EndoC
 superTrack on show
-shortLabel  Ex. superTrack on
-longLabel A super-track of related data of various types together: individual, multiWig, and composite
+shortLabel  EndoC cells
+longLabel Chromatin landscape for EndoC cells
 
 	track H3K27ac_endoc
-	parent superTrack1
+	parent EndoC
 	compositeTrack on
 	type bigWig
 	shortLabel H3K27ac EndoC
