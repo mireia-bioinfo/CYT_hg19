@@ -1,74 +1,66 @@
-#####################################################
-track EndoC
-superTrack on show
-shortLabel  EndoC on
-longLabel Chromatin landscape of EndoC cells
+track H3K27ac_endoc
+compositeTrack on
+type bigWig
+shortLabel H3K27ac EndoC
+longLabel H3K27ac ChIP-seq in EndoC-bH1 cells
+visibility full
+smoothingWindow 2
+windowingFunction mean
+autoScale on
+alwaysZero on
+priority 1
+allButtonPair on
+showSubtrackColorOnUi on
 
-	track H3K27ac_endoc
-	parent EndoC
-	compositeTrack on
-	type bigWig
-	shortLabel H3K27ac EndoC
-	longLabel H3K27ac ChIP-seq in EndoC-bH1 cells
-	visibility full
-	smoothingWindow 2
-	windowingFunction mean
-	autoScale on
-	alwaysZero on
+	track H3K27ac_endoc_CTRL
+	bigDataUrl https://ndownloader.figshare.com/files/24234731?private_link=d45087414fd9da0426f7
+	shortLabel H3K27ac EndoC CTRL
+	longLabel H3K27ac ChIP-seq in EndoC-bH1 performed in control conditions
+	parent H3K27ac_endoc
 	priority 1
-	allButtonPair on
-	showSubtrackColorOnUi on
-
-		track H3K27ac_endoc_CTRL
-		bigDataUrl https://ndownloader.figshare.com/files/24234731?private_link=d45087414fd9da0426f7
-		shortLabel H3K27ac EndoC CTRL
-		longLabel H3K27ac ChIP-seq in EndoC-bH1 performed in control conditions
-		parent H3K27ac_endoc
-		priority 1
-		type bigWig
-		color 82,149,203
-
-		track H3K27ac_endoc_CYT
-		bigDataUrl https://ndownloader.figshare.com/files/24235058?private_link=d45087414fd9da0426f7
-		shortLabel H3K27ac ChIP-seq EndoC CYT
-		longLabel H3K27ac ChIP-seq in EndoC-bH1 performed after exposure to proinflammatory cytokines
-		parent H3K27ac_endoc
-		priority 2
-		type bigWig
-		color 253,140,37
-
-	track H3K27ac_hi
-	parent EndoC
-	compositeTrack on
 	type bigWig
-	shortLabel H3K27ac ChIP-seq Human Islets
-	longLabel H3K27ac ChIP-seq in Human Pancreatic Islets
-	visibility full
-	smoothingWindow 2
-	windowingFunction mean
-	autoScale on
-	alwaysZero on
+	color 82,149,203
+
+	track H3K27ac_endoc_CYT
+	bigDataUrl https://ndownloader.figshare.com/files/24235058?private_link=d45087414fd9da0426f7
+	shortLabel H3K27ac ChIP-seq EndoC CYT
+	longLabel H3K27ac ChIP-seq in EndoC-bH1 performed after exposure to proinflammatory cytokines
+	parent H3K27ac_endoc
+	priority 2
+	type bigWig
+	color 253,140,37
+
+track H3K27ac_hi
+compositeTrack on
+type bigWig
+shortLabel H3K27ac ChIP-seq Human Islets
+longLabel H3K27ac ChIP-seq in Human Pancreatic Islets
+visibility full
+smoothingWindow 2
+windowingFunction mean
+autoScale on
+alwaysZero on
+priority 1
+allButtonPair on
+showSubtrackColorOnUi on
+
+	track H3K27ac_hi_CTRL
+	bigDataUrl https://ndownloader.figshare.com/files/24235073?private_link=d45087414fd9da0426f7
+	shortLabel H3K27ac ChIP-seq Human Islets CTRL
+	longLabel H3K27ac ChIP-seq in Human Pancreatic Islets performed in control conditions
+	parent H3K27ac_hi
 	priority 1
-	allButtonPair on
-	showSubtrackColorOnUi on
+	type bigWig
+	color 82,149,203
 
-		track H3K27ac_hi_CTRL
-		bigDataUrl https://ndownloader.figshare.com/files/24235073?private_link=d45087414fd9da0426f7
-		shortLabel H3K27ac ChIP-seq Human Islets CTRL
-		longLabel H3K27ac ChIP-seq in Human Pancreatic Islets performed in control conditions
-		parent H3K27ac_hi
-		priority 1
-		type bigWig
-		color 82,149,203
-
-		track H3K27ac_hi_CYT
-		bigDataUrl https://ndownloader.figshare.com/files/24235109?private_link=d45087414fd9da0426f7
-		shortLabel H3K27ac ChIP-seq Human Islets CYT
-		longLabel H3K27ac ChIP-seq in Human Pancreatic Islets performed after exposure to proinflammatory cytokines
-		parent H3K27ac_hi
-		priority 2
-		type bigWig
-		color 253,140,37
+	track H3K27ac_hi_CYT
+	bigDataUrl https://ndownloader.figshare.com/files/24235109?private_link=d45087414fd9da0426f7
+	shortLabel H3K27ac ChIP-seq Human Islets CYT
+	longLabel H3K27ac ChIP-seq in Human Pancreatic Islets performed after exposure to proinflammatory cytokines
+	parent H3K27ac_hi
+	priority 2
+	type bigWig
+	color 253,140,37
 
 #####################################################
 track ATAC_endoc
