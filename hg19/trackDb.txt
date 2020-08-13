@@ -1,10 +1,10 @@
-track superTrack1
+track endoC
 superTrack on show
 shortLabel  EndoC cells
 longLabel Blabla endoc cells
 
 	track H3K27ac_endoc
-	parent superTrack1
+	parent endoC
 	compositeTrack on
 	type bigWig
 	shortLabel H3K27ac EndoC
@@ -37,7 +37,7 @@ longLabel Blabla endoc cells
 		color 253,140,37
 
 	track ATAC_endoc
-	parent superTrack1
+	parent endoC
 	compositeTrack on
 	type bigWig
 	shortLabel ATAC-seq EndoC
@@ -70,7 +70,7 @@ longLabel Blabla endoc cells
 		color 253,140,37
 
 	track RNA_endoc
-	parent superTrack1
+	parent endoC
 	compositeTrack on
 	type bigWig
 	shortLabel RNA-seq EndoC
