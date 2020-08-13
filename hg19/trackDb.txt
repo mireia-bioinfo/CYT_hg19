@@ -1,3 +1,6 @@
+# track RNAbarChart
+# barChartBars EndoC_ctrl EndoC_cyt HI_ctrl HI_cyt
+
 track endoC
 superTrack on show
 shortLabel  EndoC cells
