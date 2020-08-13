@@ -36,37 +36,38 @@ longLabel Chromatin landscape for EndoC cells
 		type bigWig
 		color 253,140,37
 
-track H3K27ac_hi
-compositeTrack on
-type bigWig
-shortLabel H3K27ac ChIP-seq Human Islets
-longLabel H3K27ac ChIP-seq in Human Pancreatic Islets
-visibility full
-smoothingWindow 2
-windowingFunction mean
-autoScale on
-alwaysZero on
-priority 1
-allButtonPair on
-showSubtrackColorOnUi on
-
-	track H3K27ac_hi_CTRL
-	bigDataUrl https://ndownloader.figshare.com/files/24235073?private_link=d45087414fd9da0426f7
-	shortLabel H3K27ac ChIP-seq Human Islets CTRL
-	longLabel H3K27ac ChIP-seq in Human Pancreatic Islets performed in control conditions
-	parent H3K27ac_hi
+	track H3K27ac_hi
+	parent EndoC
+	compositeTrack on
+	type bigWig
+	shortLabel H3K27ac ChIP-seq Human Islets
+	longLabel H3K27ac ChIP-seq in Human Pancreatic Islets
+	visibility full
+	smoothingWindow 2
+	windowingFunction mean
+	autoScale on
+	alwaysZero on
 	priority 1
-	type bigWig
-	color 82,149,203
+	allButtonPair on
+	showSubtrackColorOnUi on
 
-	track H3K27ac_hi_CYT
-	bigDataUrl https://ndownloader.figshare.com/files/24235109?private_link=d45087414fd9da0426f7
-	shortLabel H3K27ac ChIP-seq Human Islets CYT
-	longLabel H3K27ac ChIP-seq in Human Pancreatic Islets performed after exposure to proinflammatory cytokines
-	parent H3K27ac_hi
-	priority 2
-	type bigWig
-	color 253,140,37
+		track H3K27ac_hi_CTRL
+		bigDataUrl https://ndownloader.figshare.com/files/24235073?private_link=d45087414fd9da0426f7
+		shortLabel H3K27ac ChIP-seq Human Islets CTRL
+		longLabel H3K27ac ChIP-seq in Human Pancreatic Islets performed in control conditions
+		parent H3K27ac_hi
+		priority 1
+		type bigWig
+		color 82,149,203
+
+		track H3K27ac_hi_CYT
+		bigDataUrl https://ndownloader.figshare.com/files/24235109?private_link=d45087414fd9da0426f7
+		shortLabel H3K27ac ChIP-seq Human Islets CYT
+		longLabel H3K27ac ChIP-seq in Human Pancreatic Islets performed after exposure to proinflammatory cytokines
+		parent H3K27ac_hi
+		priority 2
+		type bigWig
+		color 253,140,37
 
 #####################################################
 track ATAC_endoc
