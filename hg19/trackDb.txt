@@ -70,7 +70,7 @@ longLabel Blabla endoc cells
 		color 253,140,37
 
 	track RNA_endoc
-	parent EndoC
+	parent superTrack1
 	compositeTrack on
 	type bigWig
 	shortLabel RNA-seq EndoC
