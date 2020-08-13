@@ -3,7 +3,7 @@ track EndoC
 superTrack on show
 
 	track H3K27ac_endoc
-	parent EndoC-bH1
+	parent EndoC
 	compositeTrack on
 	type bigWig
 	shortLabel H3K27ac EndoC
@@ -35,9 +35,8 @@ superTrack on show
 		type bigWig
 		color 253,140,37
 
-	#####################################################
 	track H3K27ac_hi
-	parent EndoC-bH1
+	parent EndoC
 	compositeTrack on
 	type bigWig
 	shortLabel H3K27ac ChIP-seq Human Islets
