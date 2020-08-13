@@ -1,10 +1,11 @@
 track EndoC 
+track superTrack1
 superTrack on show
-shortLabel EndoC cells
-longLabel Chromatin landscape of EndoC cells
+shortLabel  EndoC cells
+longLabel Blabla endoc cells
 
 	track H3K27ac_endoc
-	parent EndoC
+	parent superTrack1
 	compositeTrack on
 	type bigWig
 	shortLabel H3K27ac EndoC
@@ -37,7 +38,7 @@ longLabel Chromatin landscape of EndoC cells
 		color 253,140,37
 
 	track ATAC_endoc
-	parent EndoC
+	parent superTrack1
 	compositeTrack on
 	type bigWig
 	shortLabel ATAC-seq EndoC
