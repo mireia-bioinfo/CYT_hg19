@@ -1,9 +1,9 @@
 #####################################################
-track H3K27ac_endoc
+track ATAC_endoc
 compositeTrack on
 type bigWig
-shortLabel H3K27ac EndoC
-longLabel H3K27ac ChIP-seq in EndoC-bH1 cells
+shortLabel ATAC-seq EndoC
+longLabel ATAC-seq in EndoC-bH1 cells
 visibility full
 viewLimits 0:20
 smoothingWindow 2
@@ -14,17 +14,17 @@ allButtonPair on
 showSubtrackColorOnUi on
 
 	track CTRL
-	bigDataUrl https://ndownloader.figshare.com/files/24234731?private_link=d45087414fd9da0426f7
-	shortLabel H3K27ac EndoC CTRL
-	longLabel H3K27ac ChIP-seq in EndoC-bH1 performed in control conditions
-	parent H3K27ac_endoc
+	bigDataUrl https://ndownloader.figshare.com/files/24234422?private_link=d45087414fd9da0426f7
+	shortLabel ATAC-seq EndoC CTRL
+	longLabel ATAC-seq in EndoC-bH1 performed in control conditions
+	parent ATAC_endoc
 	type bigWig
 	color 82,149,203
 
 	track CYT
-	bigDataUrl https://ndownloader.figshare.com/files/24235058?private_link=d45087414fd9da0426f7
-	shortLabel H3K27ac ChIP-seq EndoC CYT
-	longLabel H3K27ac ChIP-seq in EndoC-bH1 performed after exposure to proinflammatory cytokines
-	parent H3K27ac_endoc
+	bigDataUrl https://ndownloader.figshare.com/files/24234434?private_link=d45087414fd9da0426f7
+	shortLabel ATAC-seq EndoC CYT
+	longLabel ATAC-seq in EndoC-bH1 performed after exposure to proinflammatory cytokines
+	parent ATAC_endoc
 	type bigWig
 	color 253,140,37
