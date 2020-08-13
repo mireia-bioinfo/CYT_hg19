@@ -1,34 +1,40 @@
-track H3K27ac_endoc
-compositeTrack on
-type bigWig
-shortLabel H3K27ac EndoC
-longLabel H3K27ac ChIP-seq in EndoC-bH1 cells
-visibility full
-smoothingWindow 2
-windowingFunction mean
-autoScale on
-alwaysZero on
-priority 1
-allButtonPair on
-showSubtrackColorOnUi on
+track superTrack1
+superTrack on show
+shortLabel  Ex. superTrack on
+longLabel A super-track of related data of various types together: individual, multiWig, and composite
 
-	track H3K27ac_endoc_CTRL
-	bigDataUrl https://ndownloader.figshare.com/files/24234731?private_link=d45087414fd9da0426f7
-	shortLabel H3K27ac EndoC CTRL
-	longLabel H3K27ac ChIP-seq in EndoC-bH1 performed in control conditions
-	parent H3K27ac_endoc
+	track H3K27ac_endoc
+	parent superTrack1
+	compositeTrack on
+	type bigWig
+	shortLabel H3K27ac EndoC
+	longLabel H3K27ac ChIP-seq in EndoC-bH1 cells
+	visibility full
+	smoothingWindow 2
+	windowingFunction mean
+	autoScale on
+	alwaysZero on
 	priority 1
-	type bigWig
-	color 82,149,203
+	allButtonPair on
+	showSubtrackColorOnUi on
 
-	track H3K27ac_endoc_CYT
-	bigDataUrl https://ndownloader.figshare.com/files/24235058?private_link=d45087414fd9da0426f7
-	shortLabel H3K27ac ChIP-seq EndoC CYT
-	longLabel H3K27ac ChIP-seq in EndoC-bH1 performed after exposure to proinflammatory cytokines
-	parent H3K27ac_endoc
-	priority 2
-	type bigWig
-	color 253,140,37
+		track H3K27ac_endoc_CTRL
+		bigDataUrl https://ndownloader.figshare.com/files/24234731?private_link=d45087414fd9da0426f7
+		shortLabel H3K27ac EndoC CTRL
+		longLabel H3K27ac ChIP-seq in EndoC-bH1 performed in control conditions
+		parent H3K27ac_endoc
+		priority 1
+		type bigWig
+		color 82,149,203
+
+		track H3K27ac_endoc_CYT
+		bigDataUrl https://ndownloader.figshare.com/files/24235058?private_link=d45087414fd9da0426f7
+		shortLabel H3K27ac ChIP-seq EndoC CYT
+		longLabel H3K27ac ChIP-seq in EndoC-bH1 performed after exposure to proinflammatory cytokines
+		parent H3K27ac_endoc
+		priority 2
+		type bigWig
+		color 253,140,37
 
 track H3K27ac_hi
 compositeTrack on
