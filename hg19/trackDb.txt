@@ -1,4 +1,3 @@
-track EndoC 
 track superTrack1
 superTrack on show
 shortLabel  EndoC cells
