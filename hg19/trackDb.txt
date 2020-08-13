@@ -1,4 +1,7 @@
-
+track EndoC
+superTrack on show
+shortLabel  EndoC cells
+longLabel Chromatin landscape of EndoC cells
 
 	track H3K27ac_endoc
 	parent EndoC
