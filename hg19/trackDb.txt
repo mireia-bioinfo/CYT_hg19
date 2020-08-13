@@ -1,6 +1,6 @@
-track EndoC
+track EndoC 
 superTrack on show
-shortLabel  EndoC cells
+shortLabel EndoC cells
 longLabel Chromatin landscape of EndoC cells
 
 	track H3K27ac_endoc
@@ -105,7 +105,7 @@ longLabel Chromatin landscape of EndoC cells
 
 track HumanIslets
 superTrack on show
-shortLabel  Human Islets
+shortLabel Human Islets
 longLabel Chromatin landscape of human pancreatic islets
 
 	track H3K27ac_hi
