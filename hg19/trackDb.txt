@@ -1,5 +1,5 @@
 #####################################################
-track EndoC-bH1
+track EndoC
 superTrack on show
 
 	track H3K27ac_endoc
