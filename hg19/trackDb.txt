@@ -9,6 +9,7 @@ bigDataUrl https://ndownloader.figshare.com/files/24267008?private_link=f3da18f8
 visibility pack
 barChartUnit FPKM
 barChartLabel RNA expression
+priority 3
 
 track REendoc
 shortLabel REs EndoC
@@ -16,6 +17,7 @@ longLabel Regulatory Elements EndoC cells
 type bigBed 9
 itemRgb on
 visibility pack
+priority 1
 bigDataUrl https://ndownloader.figshare.com/files/24266855?private_link=f3da18f813b996e87d1a
 
 track REhi
@@ -24,12 +26,14 @@ longLabel Regulatory Elements human pancreatic islets
 type bigBed 9
 itemRgb on
 visibility pack
+priority 1
 bigDataUrl https://ndownloader.figshare.com/files/24266858?private_link=f3da18f813b996e87d1a
 
 track endoC
 superTrack on show
 shortLabel  EndoC cells
 longLabel Chromatin landscape of EndoC-bH1 cells
+priority 2
 
 	track H3K27ac_endoc
 	parent endoC
@@ -135,6 +139,7 @@ track HumanIslets
 superTrack on show
 shortLabel Human Islets
 longLabel Chromatin landscape of human pancreatic islets
+priority 2
 
 	track H3K27ac_hi
 	parent HumanIslets
