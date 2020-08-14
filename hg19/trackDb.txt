@@ -13,7 +13,7 @@ barChartLabel RNA expression
 track REendoc
 shortLabel REs EndoC
 longLabel Regulatory Elements EndoC cells
-type bigBed
+type bigBed 9
 itemRgb on
 visibility pack
 bigDataUrl https://ndownloader.figshare.com/files/24266855?private_link=f3da18f813b996e87d1a
@@ -21,7 +21,7 @@ bigDataUrl https://ndownloader.figshare.com/files/24266855?private_link=f3da18f8
 track REhi
 shortLabel REs HI
 longLabel Regulatory Elements human pancreatic islets
-type bigBed
+type bigBed 9
 itemRgb on
 visibility pack
 bigDataUrl https://ndownloader.figshare.com/files/24266858?private_link=f3da18f813b996e87d1a
