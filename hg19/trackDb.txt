@@ -135,7 +135,7 @@ longLabel Chromatin landscape of human pancreatic islets
 		type bigWig
 		color 82,149,203
 
-		track H3K27ac
+		track H3K27ac_hi_CYT
 		bigDataUrl https://ndownloader.figshare.com/files/24235109
 		shortLabel H3K27ac ChIP-seq Human Islets CYT
 		longLabel H3K27ac ChIP-seq in Human Pancreatic Islets performed after exposure to proinflammatory cytokines
