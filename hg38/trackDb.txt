@@ -1,11 +1,39 @@
 # hg38
-# track RNAbarChart
-# barChartBars EndoC_ctrl EndoC_cyt HI_ctrl HI_cyt
+
+track RNAbarChart
+shortLabel FPKM RNA-seq
+longLabel Gene expression in CTRL/CYT conditions for EndoC and HI
+type bigBarChart
+barChartBars EndoC_ctrl EndoC_cyt HI_ctrl HI_cyt
+bigDataUrl https://ndownloader.figshare.com/files/24267254?private_link=f3da18f813b996e87d1a
+visibility pack
+barChartUnit FPKM
+barChartLabel RNA expression
+priority 3
+
+track REendoc
+shortLabel REs EndoC
+longLabel Regulatory Elements EndoC cells
+type bigBed 9
+itemRgb on
+visibility pack
+priority 1
+bigDataUrl https://ndownloader.figshare.com/files/24266852?private_link=f3da18f813b996e87d1a
+
+track REhi
+shortLabel REs HI
+longLabel Regulatory Elements human pancreatic islets
+type bigBed 9
+itemRgb on
+visibility pack
+priority 1
+bigDataUrl https://ndownloader.figshare.com/files/24266861?private_link=f3da18f813b996e87d1a
 
 track endoC
 superTrack on show
 shortLabel  EndoC cells
 longLabel Chromatin landscape of EndoC-bH1 cells
+priority 2
 
 	track H3K27ac_endoc
 	parent endoC
@@ -23,7 +51,7 @@ longLabel Chromatin landscape of EndoC-bH1 cells
 	showSubtrackColorOnUi on
 
 		track H3K27ac_endoc_CTRL
-		bigDataUrl https://ndownloader.figshare.com/files/24234731
+		bigDataUrl https://ndownloader.figshare.com/files/24264058
 		shortLabel H3K27ac EndoC CTRL
 		longLabel H3K27ac ChIP-seq in EndoC-bH1 performed in control conditions
 		parent H3K27ac_endoc
@@ -32,7 +60,7 @@ longLabel Chromatin landscape of EndoC-bH1 cells
 		color 82,149,203
 
 		track H3K27ac_endoc_CYT
-		bigDataUrl https://ndownloader.figshare.com/files/24235058
+		bigDataUrl https://ndownloader.figshare.com/files/24264090
 		shortLabel H3K27ac ChIP-seq EndoC CYT
 		longLabel H3K27ac ChIP-seq in EndoC-bH1 performed after exposure to proinflammatory cytokines
 		parent H3K27ac_endoc
@@ -56,7 +84,7 @@ longLabel Chromatin landscape of EndoC-bH1 cells
 	showSubtrackColorOnUi on
 
 		track ATAC_endoc_CTRL
-		bigDataUrl https://ndownloader.figshare.com/files/24234422
+		bigDataUrl https://ndownloader.figshare.com/files/24263650
 		shortLabel ATAC-seq EndoC CTRL
 		longLabel ATAC-seq in EndoC-bH1 performed in control conditions
 		parent ATAC_endoc
@@ -65,7 +93,7 @@ longLabel Chromatin landscape of EndoC-bH1 cells
 		color 82,149,203
 
 		track ATAC_endoc_CYT
-		bigDataUrl https://ndownloader.figshare.com/files/24234434
+		bigDataUrl https://ndownloader.figshare.com/files/24263627
 		shortLabel ATAC-seq EndoC CYT
 		longLabel ATAC-seq in EndoC-bH1 performed after exposure to proinflammatory cytokines
 		parent ATAC_endoc
@@ -89,7 +117,7 @@ longLabel Chromatin landscape of EndoC-bH1 cells
 	showSubtrackColorOnUi on
 
 		track RNA_endoc_CTRL
-		bigDataUrl https://ndownloader.figshare.com/files/24262832
+		bigDataUrl https://ndownloader.figshare.com/files/24264256
 		shortLabel RNA-seq EndoC CTRL
 		longLabel RNA-seq in EndoC-bH1 performed in control conditions
 		parent RNA_endoc
@@ -98,7 +126,7 @@ longLabel Chromatin landscape of EndoC-bH1 cells
 		color 82,149,203
 
 		track RNA_endoc_CYT
-		bigDataUrl https://ndownloader.figshare.com/files/24262835
+		bigDataUrl https://ndownloader.figshare.com/files/24264277
 		shortLabel RNA-seq EndoC CYT
 		longLabel RNA-seq in EndoC-bH1 performed after exposure to proinflammatory cytokines
 		parent RNA_endoc
@@ -111,6 +139,7 @@ track HumanIslets
 superTrack on show
 shortLabel Human Islets
 longLabel Chromatin landscape of human pancreatic islets
+priority 2
 
 	track H3K27ac_hi
 	parent HumanIslets
@@ -128,7 +157,7 @@ longLabel Chromatin landscape of human pancreatic islets
 	showSubtrackColorOnUi on
 
 		track H3K27ac_hi_CTRL
-		bigDataUrl https://ndownloader.figshare.com/files/24235073
+		bigDataUrl https://ndownloader.figshare.com/files/24264291
 		shortLabel H3K27ac ChIP-seq Human Islets CTRL
 		longLabel H3K27ac ChIP-seq in Human Pancreatic Islets performed in control conditions
 		parent H3K27ac_hi
@@ -137,7 +166,7 @@ longLabel Chromatin landscape of human pancreatic islets
 		color 82,149,203
 
 		track H3K27ac_hi_CYT
-		bigDataUrl https://ndownloader.figshare.com/files/24235109
+		bigDataUrl https://ndownloader.figshare.com/files/24264258
 		shortLabel H3K27ac ChIP-seq Human Islets CYT
 		longLabel H3K27ac ChIP-seq in Human Pancreatic Islets performed after exposure to proinflammatory cytokines
 		parent H3K27ac_hi
@@ -161,7 +190,7 @@ longLabel Chromatin landscape of human pancreatic islets
 	showSubtrackColorOnUi on
 
 		track ATAC_hi_CTRL
-		bigDataUrl https://ndownloader.figshare.com/files/24234470
+		bigDataUrl https://ndownloader.figshare.com/files/24263785
 		shortLabel ATAC-seq Human Islets CTRL
 		longLabel ATAC-seq in Human Pancreatic Islets performed in control conditions
 		parent ATAC_hi
@@ -170,7 +199,7 @@ longLabel Chromatin landscape of human pancreatic islets
 		color 82,149,203
 
 		track ATAC_hi_CYT
-		bigDataUrl https://ndownloader.figshare.com/files/24234635
+		bigDataUrl https://ndownloader.figshare.com/files/24263910
 		shortLabel ATAC-seq Human Islets CYT
 		longLabel ATAC-seq in Human Pancreatic Islets performed after exposure to proinflammatory cytokines
 		parent ATAC_hi
@@ -194,7 +223,7 @@ longLabel Chromatin landscape of human pancreatic islets
 	showSubtrackColorOnUi on
 
 		track RNA_hi_CTRL
-		bigDataUrl https://ndownloader.figshare.com/files/24262838
+		bigDataUrl https://ndownloader.figshare.com/files/24264477
 		shortLabel RNA-seq Human Islets CTRL
 		longLabel RNA-seq in Human Pancreatic Islets performed in control conditions
 		parent RNA_hi
@@ -203,7 +232,7 @@ longLabel Chromatin landscape of human pancreatic islets
 		color 82,149,203
 
 		track RNA_hi_CYT
-		bigDataUrl https://ndownloader.figshare.com/files/24262841
+		bigDataUrl https://ndownloader.figshare.com/files/24264397
 		shortLabel RNA-seq Human Islets CYT
 		longLabel RNA-seq in Human Pancreatic Islets performed after exposure to proinflammatory cytokines
 		parent RNA_hi
