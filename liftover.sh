@@ -1,4 +1,4 @@
-INPUT=$( ls hg19/*.bw | xargs basename -a )
+INPUT=$( ls hg19/RNA*.bw | xargs basename -a )
 HG19="hg19"
 HG38="hg38"
 CHAIN="/home/mramos/refs/liftOver/hg19ToHg38.over.chain"
