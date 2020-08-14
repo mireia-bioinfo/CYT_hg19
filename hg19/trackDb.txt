@@ -1,10 +1,35 @@
-# track RNAbarChart
-# barChartBars EndoC_ctrl EndoC_cyt HI_ctrl HI_cyt
+# hg19
+
+track RNAbarChart
+shortLabel FPKM RNA-seq
+longLabel Gene expression in CTRL/CYT conditions for EndoC and HI
+type bigBarChart
+barChartBars EndoC_ctrl EndoC_cyt HI_ctrl HI_cyt
+bigDataUrl https://ndownloader.figshare.com/files/24267008?private_link=f3da18f813b996e87d1a
+visibility pack
+barChartUnit FPKM
+barChartLabel RNA expression
+
+track REendoc
+shortLabel REs EndoC
+longLabel Regulatory Elements EndoC cells
+type bigBed
+itemRgb on
+visibility pack
+bigDataUrl https://ndownloader.figshare.com/files/24266855?private_link=f3da18f813b996e87d1a
+
+track REhi
+shortLabel REs HI
+longLabel Regulatory Elements human pancreatic islets
+type bigBed
+itemRgb on
+visibility pack
+bigDataUrl https://ndownloader.figshare.com/files/24266858?private_link=f3da18f813b996e87d1a
 
 track endoC
 superTrack on show
 shortLabel  EndoC cells
-longLabel Blabla endoc cells
+longLabel Chromatin landscape of EndoC-bH1 cells
 
 	track H3K27ac_endoc
 	parent endoC
