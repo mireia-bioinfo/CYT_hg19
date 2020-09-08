@@ -1,21 +1,6 @@
 # hg19
 
 #################################################
-## RNA-seq expression levels
-#################################################
-
-track RNAbarChart
-shortLabel FPKM RNA-seq
-longLabel Gene expression in CTRL/CYT conditions for EndoC and HI
-type bigBarChart
-barChartBars EndoC_ctrl EndoC_cyt HI_ctrl HI_cyt
-bigDataUrl https://ndownloader.figshare.com/files/24267008?private_link=f3da18f813b996e87d1a
-visibility pack
-barChartUnit FPKM
-barChartLabel RNA expression
-priority 3
-
-#################################################
 ## Regulatory Elements
 #################################################
 
@@ -34,7 +19,7 @@ longLabel Regulatory Elements human pancreatic islets
 type bigBed 9
 itemRgb on
 visibility pack
-priority 1
+priority 2
 bigDataUrl https://ndownloader.figshare.com/files/24266858?private_link=f3da18f813b996e87d1a
 
 #################################################
@@ -45,7 +30,7 @@ track accessibility
 superTrack on show
 shortLabel ATAC-seq
 longLabel Chromatin accessibility landscape (ATAC-seq)
-priority 2
+priority 3
 
 	track ATAC_endoc
 	parent accessibility
@@ -119,7 +104,7 @@ track histones
 superTrack on show
 shortLabel  H3K27ac ChIP-seq
 longLabel H3K27ac ChIP-seq enrichment
-priority 3
+priority 4
 
 	track H3K27ac_endoc
 	parent histones
@@ -188,14 +173,14 @@ priority 3
 		color 253,140,37
 
 #################################################
-## Histone Marks
+## RNA-seq
 #################################################
 
 track rnaseq
 superTrack on
 shortLabel  RNA-seq
 longLabel Gene expression by RNA-seq
-priority 4
+priority 5
 
 	track RNA_endoc
 	parent rnaseq
@@ -260,3 +245,18 @@ priority 4
 		priority 2
 		type bigWig
 		color 253,140,37
+
+#################################################
+## RNA-seq expression levels
+#################################################
+
+track RNAbarChart
+shortLabel FPKM RNA-seq
+longLabel Gene expression in CTRL/CYT conditions for EndoC and HI
+type bigBarChart
+barChartBars EndoC_ctrl EndoC_cyt HI_ctrl HI_cyt
+bigDataUrl https://ndownloader.figshare.com/files/24267008?private_link=f3da18f813b996e87d1a
+visibility pack
+barChartUnit FPKM
+barChartLabel RNA expression
+priority 6
