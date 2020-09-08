@@ -117,7 +117,6 @@ priority 4
 	windowingFunction mean
 	autoScale on
 	alwaysZero on
-	priority 1
 	allButtonPair on
 	showSubtrackColorOnUi on
 
@@ -150,7 +149,6 @@ priority 4
 	windowingFunction mean
 	autoScale on
 	alwaysZero on
-	priority 1
 	allButtonPair on
 	showSubtrackColorOnUi on
 
@@ -252,7 +250,7 @@ priority 5
 
 track RNAbarChart
 shortLabel FPKM RNA-seq
-longLabel Gene expression in CTRL/CYT conditions for EndoC and HI
+longLabel Gene expression (FPKM) from Ramos-Rodríguez et al. 2019
 type bigBarChart
 barChartBars EndoC_ctrl EndoC_cyt HI_ctrl HI_cyt
 bigDataUrl https://ndownloader.figshare.com/files/24267008?private_link=f3da18f813b996e87d1a
