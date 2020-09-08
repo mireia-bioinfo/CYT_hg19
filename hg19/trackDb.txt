@@ -37,7 +37,7 @@ priority 3
 	compositeTrack on
 	type bigWig
 	shortLabel ATAC-seq EndoC
-	longLabel ATAC-seq in EndoC-bH1 cells (Ramos-Rodríguez et al. 2019)
+	longLabel ATAC-seq in EndoC-bH1 cells (Ramos-Rodriguez et al. 2019)
 	visibility hide
 	smoothingWindow 2
 	windowingFunction mean
@@ -49,7 +49,7 @@ priority 3
 		track ATAC_endoc_CTRL
 		bigDataUrl https://ndownloader.figshare.com/files/24234422
 		shortLabel ATAC-seq EndoC CTRL
-		longLabel ATAC-seq in EndoC-bH1 control (Ramos-Rodríguez et al. 2019)
+		longLabel ATAC-seq in EndoC-bH1 control (Ramos-Rodriguez et al. 2019)
 		parent ATAC_endoc
 		priority 1
 		type bigWig
@@ -58,7 +58,7 @@ priority 3
 		track ATAC_endoc_CYT
 		bigDataUrl https://ndownloader.figshare.com/files/24234434
 		shortLabel ATAC-seq EndoC CYT
-		longLabel ATAC-seq in EndoC-bH1 after cytokine exposure (Ramos-Rodríguez et al. 2019)
+		longLabel ATAC-seq in EndoC-bH1 after cytokine exposure (Ramos-Rodriguez et al. 2019)
 		parent ATAC_endoc
 		priority 2
 		type bigWig
@@ -69,7 +69,7 @@ priority 3
 	compositeTrack on
 	type bigWig
 	shortLabel ATAC-seq Human Islets
-	longLabel ATAC-seq in Human Pancreatic Islets (Ramos-Rodríguez et al. 2019)
+	longLabel ATAC-seq in Human Pancreatic Islets (Ramos-Rodriguez et al. 2019)
 	visibility full
 	smoothingWindow 2
 	windowingFunction mean
@@ -81,7 +81,7 @@ priority 3
 		track ATAC_hi_CTRL
 		bigDataUrl https://ndownloader.figshare.com/files/24234470
 		shortLabel ATAC-seq Human Islets CTRL
-		longLabel ATAC-seq in Human Islets control (Ramos-Rodríguez et al. 2019)
+		longLabel ATAC-seq in Human Islets control (Ramos-Rodriguez et al. 2019)
 		parent ATAC_hi
 		priority 1
 		type bigWig
@@ -90,7 +90,7 @@ priority 3
 		track ATAC_hi_CYT
 		bigDataUrl https://ndownloader.figshare.com/files/24234635
 		shortLabel ATAC-seq Human Islets CYT
-		longLabel ATAC-seq in Human Islets after cytokine exposure (Ramos-Rodríguez et al. 2019)
+		longLabel ATAC-seq in Human Islets after cytokine exposure (Ramos-Rodriguez et al. 2019)
 		parent ATAC_hi
 		priority 2
 		type bigWig
@@ -111,7 +111,7 @@ priority 4
 	compositeTrack on
 	type bigWig
 	shortLabel H3K27ac EndoC
-	longLabel H3K27ac ChIP-seq in EndoC-bH1 cells (Ramos-Rodríguez et al. 2019)
+	longLabel H3K27ac ChIP-seq in EndoC-bH1 cells (Ramos-Rodriguez et al. 2019)
 	visibility hide
 	smoothingWindow 2
 	windowingFunction mean
@@ -123,7 +123,7 @@ priority 4
 		track H3K27ac_endoc_CTRL
 		bigDataUrl https://ndownloader.figshare.com/files/24234731
 		shortLabel H3K27ac EndoC CTRL
-		longLabel H3K27ac ChIP-seq in EndoC-bH1 contrl (Ramos-Rodríguez et al. 2019)
+		longLabel H3K27ac ChIP-seq in EndoC-bH1 contrl (Ramos-Rodriguez et al. 2019)
 		parent H3K27ac_endoc
 		priority 1
 		type bigWig
@@ -132,7 +132,7 @@ priority 4
 		track H3K27ac_endoc_CYT
 		bigDataUrl https://ndownloader.figshare.com/files/24235058
 		shortLabel H3K27ac ChIP-seq EndoC CYT
-		longLabel H3K27ac ChIP-seq in EndoC-bH1 after cytokine exposure (Ramos-Rodríguez et al. 2019)
+		longLabel H3K27ac ChIP-seq in EndoC-bH1 after cytokine exposure (Ramos-Rodriguez et al. 2019)
 		parent H3K27ac_endoc
 		priority 2
 		type bigWig
@@ -155,7 +155,7 @@ priority 4
 		track H3K27ac_hi_CTRL
 		bigDataUrl https://ndownloader.figshare.com/files/24235073
 		shortLabel H3K27ac ChIP-seq Human Islets CTRL
-		longLabel H3K27ac ChIP-seq in Human Islets control (Ramos-Rodríguez et al. 2019)
+		longLabel H3K27ac ChIP-seq in Human Islets control (Ramos-Rodriguez et al. 2019)
 		parent H3K27ac_hi
 		priority 1
 		type bigWig
@@ -164,7 +164,7 @@ priority 4
 		track H3K27ac_hi_CYT
 		bigDataUrl https://ndownloader.figshare.com/files/24235109
 		shortLabel H3K27ac ChIP-seq Human Islets CYT
-		longLabel H3K27ac ChIP-seq in Human Islets performed after cytokine exposure (Ramos-Rodríguez et al. 2019)
+		longLabel H3K27ac ChIP-seq in Human Islets performed after cytokine exposure (Ramos-Rodriguez et al. 2019)
 		parent H3K27ac_hi
 		priority 2
 		type bigWig
@@ -185,7 +185,7 @@ priority 5
 	compositeTrack on
 	type bigWig
 	shortLabel RNA-seq EndoC
-	longLabel RNA-seq in EndoC-bH1 cells (Ramos-Rodríguez et al. 2019)
+	longLabel RNA-seq in EndoC-bH1 cells (Ramos-Rodriguez et al. 2019)
 	visibility hide
 	smoothingWindow 2
 	windowingFunction mean
@@ -197,7 +197,7 @@ priority 5
 		track RNA_endoc_CTRL
 		bigDataUrl https://ndownloader.figshare.com/files/24262832
 		shortLabel RNA-seq EndoC CTRL
-		longLabel RNA-seq in EndoC-bH1 control (Ramos-Rodríguez et al. 2019)
+		longLabel RNA-seq in EndoC-bH1 control (Ramos-Rodriguez et al. 2019)
 		parent RNA_endoc
 		priority 1
 		type bigWig
@@ -206,7 +206,7 @@ priority 5
 		track RNA_endoc_CYT
 		bigDataUrl https://ndownloader.figshare.com/files/24262835
 		shortLabel RNA-seq EndoC CYT
-		longLabel RNA-seq in EndoC-bH1 after cytokine exposure (Ramos-Rodríguez et al. 2019)
+		longLabel RNA-seq in EndoC-bH1 after cytokine exposure (Ramos-Rodriguez et al. 2019)
 		parent RNA_endoc
 		priority 2
 		type bigWig
@@ -217,7 +217,7 @@ priority 5
 	compositeTrack on
 	type bigWig
 	shortLabel RNA-seq Human Islets
-	longLabel RNA-seq in Human Pancreatic Islets (Ramos-Rodríguez et al. 2019)
+	longLabel RNA-seq in Human Pancreatic Islets (Ramos-Rodriguez et al. 2019)
 	visibility full
 	smoothingWindow 2
 	windowingFunction mean
@@ -229,7 +229,7 @@ priority 5
 		track RNA_hi_CTRL
 		bigDataUrl https://ndownloader.figshare.com/files/24262838
 		shortLabel RNA-seq Human Islets CTRL
-		longLabel RNA-seq in Human Islets control (Ramos-Rodríguez et al. 2019)
+		longLabel RNA-seq in Human Islets control (Ramos-Rodriguez et al. 2019)
 		parent RNA_hi
 		priority 1
 		type bigWig
@@ -238,7 +238,7 @@ priority 5
 		track RNA_hi_CYT
 		bigDataUrl https://ndownloader.figshare.com/files/24262841
 		shortLabel RNA-seq Human Islets CYT
-		longLabel RNA-seq in Human Islets after cytokine exposure (Ramos-Rodríguez et al. 2019)
+		longLabel RNA-seq in Human Islets after cytokine exposure (Ramos-Rodriguez et al. 2019)
 		parent RNA_hi
 		priority 2
 		type bigWig
@@ -250,7 +250,7 @@ priority 5
 
 track RNAbarChart
 shortLabel FPKM RNA-seq
-longLabel Gene expression (FPKM) from Ramos-Rodríguez et al. 2019
+longLabel Gene expression (FPKM) from Ramos-Rodriguez et al. 2019
 type bigBarChart
 barChartBars EndoC_ctrl EndoC_cyt HI_ctrl HI_cyt
 bigDataUrl https://ndownloader.figshare.com/files/24267008?private_link=f3da18f813b996e87d1a
