@@ -1,5 +1,9 @@
 # hg19
 
+#################################################
+## RNA-seq expression levels
+#################################################
+
 track RNAbarChart
 shortLabel FPKM RNA-seq
 longLabel Gene expression in CTRL/CYT conditions for EndoC and HI
@@ -10,6 +14,10 @@ visibility pack
 barChartUnit FPKM
 barChartLabel RNA expression
 priority 3
+
+#################################################
+## Regulatory Elements
+#################################################
 
 track REendoc
 shortLabel REs EndoC
@@ -29,19 +37,97 @@ visibility pack
 priority 1
 bigDataUrl https://ndownloader.figshare.com/files/24266858?private_link=f3da18f813b996e87d1a
 
-track endoC
+#################################################
+## Chromatin Accessibility
+#################################################
+
+track accessibility
 superTrack on show
-shortLabel  EndoC cells
-longLabel Chromatin landscape of EndoC-bH1 cells
+shortLabel ATAC-seq
+longLabel Chromatin accessibility landscape (ATAC-seq)
 priority 2
 
+	track ATAC_endoc
+	parent accessibility
+	compositeTrack on
+	type bigWig
+	shortLabel ATAC-seq EndoC
+	longLabel ATAC-seq in EndoC-bH1 cells (Ramos-Rodríguez et al. 2019)
+	visibility hide
+	smoothingWindow 2
+	windowingFunction mean
+	autoScale on
+	alwaysZero on
+	allButtonPair on
+	showSubtrackColorOnUi on
+
+		track ATAC_endoc_CTRL
+		bigDataUrl https://ndownloader.figshare.com/files/24234422
+		shortLabel ATAC-seq EndoC CTRL
+		longLabel ATAC-seq in EndoC-bH1 control (Ramos-Rodríguez et al. 2019)
+		parent ATAC_endoc
+		priority 1
+		type bigWig
+		color 82,149,203
+
+		track ATAC_endoc_CYT
+		bigDataUrl https://ndownloader.figshare.com/files/24234434
+		shortLabel ATAC-seq EndoC CYT
+		longLabel ATAC-seq in EndoC-bH1 after cytokine exposure (Ramos-Rodríguez et al. 2019)
+		parent ATAC_endoc
+		priority 2
+		type bigWig
+		color 253,140,37
+
+	track ATAC_hi
+	parent accessibility
+	compositeTrack on
+	type bigWig
+	shortLabel ATAC-seq Human Islets
+	longLabel ATAC-seq in Human Pancreatic Islets (Ramos-Rodríguez et al. 2019)
+	visibility full
+	smoothingWindow 2
+	windowingFunction mean
+	autoScale on
+	alwaysZero on
+	allButtonPair on
+	showSubtrackColorOnUi on
+
+		track ATAC_hi_CTRL
+		bigDataUrl https://ndownloader.figshare.com/files/24234470
+		shortLabel ATAC-seq Human Islets CTRL
+		longLabel ATAC-seq in Human Islets control (Ramos-Rodríguez et al. 2019)
+		parent ATAC_hi
+		priority 1
+		type bigWig
+		color 82,149,203
+
+		track ATAC_hi_CYT
+		bigDataUrl https://ndownloader.figshare.com/files/24234635
+		shortLabel ATAC-seq Human Islets CYT
+		longLabel ATAC-seq in Human Islets after cytokine exposure (Ramos-Rodríguez et al. 2019)
+		parent ATAC_hi
+		priority 2
+		type bigWig
+		color 253,140,37
+
+#################################################
+## Histone Marks
+#################################################
+
+track histones
+superTrack on show
+shortLabel  H3K27ac ChIP-seq
+longLabel H3K27ac ChIP-seq enrichment
+priority 3
+
 	track H3K27ac_endoc
-	parent endoC
+	parent histones
 	compositeTrack on
 	type bigWig
 	shortLabel H3K27ac EndoC
-	longLabel H3K27ac ChIP-seq in EndoC-bH1 cells
-	visibility full
+	longLabel H3K27ac ChIP-seq in EndoC-bH1 cells (Ramos-Rodríguez et al. 2019)
+	visibility hide
 	smoothingWindow 2
 	windowingFunction mean
 	autoScale on
@@ -53,7 +139,7 @@ priority 2
 		track H3K27ac_endoc_CTRL
 		bigDataUrl https://ndownloader.figshare.com/files/24234731
 		shortLabel H3K27ac EndoC CTRL
-		longLabel H3K27ac ChIP-seq in EndoC-bH1 performed in control conditions
+		longLabel H3K27ac ChIP-seq in EndoC-bH1 contrl (Ramos-Rodríguez et al. 2019)
 		parent H3K27ac_endoc
 		priority 1
 		type bigWig
@@ -62,87 +148,14 @@ priority 2
 		track H3K27ac_endoc_CYT
 		bigDataUrl https://ndownloader.figshare.com/files/24235058
 		shortLabel H3K27ac ChIP-seq EndoC CYT
-		longLabel H3K27ac ChIP-seq in EndoC-bH1 performed after exposure to proinflammatory cytokines
+		longLabel H3K27ac ChIP-seq in EndoC-bH1 after cytokine exposure (Ramos-Rodríguez et al. 2019)
 		parent H3K27ac_endoc
 		priority 2
 		type bigWig
 		color 253,140,37
 
-	track ATAC_endoc
-	parent endoC
-	compositeTrack on
-	type bigWig
-	shortLabel ATAC-seq EndoC
-	longLabel ATAC-seq in EndoC-bH1 cells
-	visibility full
-	smoothingWindow 2
-	windowingFunction mean
-	autoScale on
-	alwaysZero on
-	priority 1
-	allButtonPair on
-	showSubtrackColorOnUi on
-
-		track ATAC_endoc_CTRL
-		bigDataUrl https://ndownloader.figshare.com/files/24234422
-		shortLabel ATAC-seq EndoC CTRL
-		longLabel ATAC-seq in EndoC-bH1 performed in control conditions
-		parent ATAC_endoc
-		priority 1
-		type bigWig
-		color 82,149,203
-
-		track ATAC_endoc_CYT
-		bigDataUrl https://ndownloader.figshare.com/files/24234434
-		shortLabel ATAC-seq EndoC CYT
-		longLabel ATAC-seq in EndoC-bH1 performed after exposure to proinflammatory cytokines
-		parent ATAC_endoc
-		priority 2
-		type bigWig
-		color 253,140,37
-
-	track RNA_endoc
-	parent endoC
-	compositeTrack on
-	type bigWig
-	shortLabel RNA-seq EndoC
-	longLabel RNA-seq in EndoC-bH1 cells
-	visibility full
-	smoothingWindow 2
-	windowingFunction mean
-	autoScale on
-	alwaysZero on
-	priority 1
-	allButtonPair on
-	showSubtrackColorOnUi on
-
-		track RNA_endoc_CTRL
-		bigDataUrl https://ndownloader.figshare.com/files/24262832
-		shortLabel RNA-seq EndoC CTRL
-		longLabel RNA-seq in EndoC-bH1 performed in control conditions
-		parent RNA_endoc
-		priority 1
-		type bigWig
-		color 82,149,203
-
-		track RNA_endoc_CYT
-		bigDataUrl https://ndownloader.figshare.com/files/24262835
-		shortLabel RNA-seq EndoC CYT
-		longLabel RNA-seq in EndoC-bH1 performed after exposure to proinflammatory cytokines
-		parent RNA_endoc
-		priority 2
-		type bigWig
-		color 253,140,37
-
-
-track HumanIslets
-superTrack on show
-shortLabel Human Islets
-longLabel Chromatin landscape of human pancreatic islets
-priority 2
-
 	track H3K27ac_hi
-	parent HumanIslets
+	parent histones
 	compositeTrack on
 	type bigWig
 	shortLabel H3K27ac ChIP-seq Human Islets
@@ -159,7 +172,7 @@ priority 2
 		track H3K27ac_hi_CTRL
 		bigDataUrl https://ndownloader.figshare.com/files/24235073
 		shortLabel H3K27ac ChIP-seq Human Islets CTRL
-		longLabel H3K27ac ChIP-seq in Human Pancreatic Islets performed in control conditions
+		longLabel H3K27ac ChIP-seq in Human Islets control (Ramos-Rodríguez et al. 2019)
 		parent H3K27ac_hi
 		priority 1
 		type bigWig
@@ -168,64 +181,72 @@ priority 2
 		track H3K27ac_hi_CYT
 		bigDataUrl https://ndownloader.figshare.com/files/24235109
 		shortLabel H3K27ac ChIP-seq Human Islets CYT
-		longLabel H3K27ac ChIP-seq in Human Pancreatic Islets performed after exposure to proinflammatory cytokines
+		longLabel H3K27ac ChIP-seq in Human Islets performed after cytokine exposure (Ramos-Rodríguez et al. 2019)
 		parent H3K27ac_hi
 		priority 2
 		type bigWig
 		color 253,140,37
 
-	track ATAC_hi
-	parent HumanIslets
+#################################################
+## Histone Marks
+#################################################
+
+track rnaseq
+superTrack on
+shortLabel  RNA-seq
+longLabel Gene expression by RNA-seq
+priority 4
+
+	track RNA_endoc
+	parent rnaseq
 	compositeTrack on
 	type bigWig
-	shortLabel ATAC-seq Human Islets
-	longLabel ATAC-seq in Human Pancreatic Islets
-	visibility full
+	shortLabel RNA-seq EndoC
+	longLabel RNA-seq in EndoC-bH1 cells (Ramos-Rodríguez et al. 2019)
+	visibility hide
 	smoothingWindow 2
 	windowingFunction mean
 	autoScale on
 	alwaysZero on
-	priority 1
 	allButtonPair on
 	showSubtrackColorOnUi on
 
-		track ATAC_hi_CTRL
-		bigDataUrl https://ndownloader.figshare.com/files/24234470
-		shortLabel ATAC-seq Human Islets CTRL
-		longLabel ATAC-seq in Human Pancreatic Islets performed in control conditions
-		parent ATAC_hi
+		track RNA_endoc_CTRL
+		bigDataUrl https://ndownloader.figshare.com/files/24262832
+		shortLabel RNA-seq EndoC CTRL
+		longLabel RNA-seq in EndoC-bH1 control (Ramos-Rodríguez et al. 2019)
+		parent RNA_endoc
 		priority 1
 		type bigWig
 		color 82,149,203
 
-		track ATAC_hi_CYT
-		bigDataUrl https://ndownloader.figshare.com/files/24234635
-		shortLabel ATAC-seq Human Islets CYT
-		longLabel ATAC-seq in Human Pancreatic Islets performed after exposure to proinflammatory cytokines
-		parent ATAC_hi
+		track RNA_endoc_CYT
+		bigDataUrl https://ndownloader.figshare.com/files/24262835
+		shortLabel RNA-seq EndoC CYT
+		longLabel RNA-seq in EndoC-bH1 after cytokine exposure (Ramos-Rodríguez et al. 2019)
+		parent RNA_endoc
 		priority 2
 		type bigWig
 		color 253,140,37
 
 	track RNA_hi
-	parent HumanIslets
+	parent rnaseq
 	compositeTrack on
 	type bigWig
 	shortLabel RNA-seq Human Islets
-	longLabel RNA-seq in Human Pancreatic Islets
+	longLabel RNA-seq in Human Pancreatic Islets (Ramos-Rodríguez et al. 2019)
 	visibility full
 	smoothingWindow 2
 	windowingFunction mean
 	autoScale on
 	alwaysZero on
-	priority 1
 	allButtonPair on
 	showSubtrackColorOnUi on
 
 		track RNA_hi_CTRL
 		bigDataUrl https://ndownloader.figshare.com/files/24262838
 		shortLabel RNA-seq Human Islets CTRL
-		longLabel RNA-seq in Human Pancreatic Islets performed in control conditions
+		longLabel RNA-seq in Human Islets control (Ramos-Rodríguez et al. 2019)
 		parent RNA_hi
 		priority 1
 		type bigWig
@@ -234,7 +255,7 @@ priority 2
 		track RNA_hi_CYT
 		bigDataUrl https://ndownloader.figshare.com/files/24262841
 		shortLabel RNA-seq Human Islets CYT
-		longLabel RNA-seq in Human Pancreatic Islets performed after exposure to proinflammatory cytokines
+		longLabel RNA-seq in Human Islets after cytokine exposure (Ramos-Rodríguez et al. 2019)
 		parent RNA_hi
 		priority 2
 		type bigWig
